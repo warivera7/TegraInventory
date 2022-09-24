@@ -111,6 +111,6 @@
 <script src="../../../assets/datatables/jquery.dataTables.min.js"></script>
 <script src="../../../assets/datatables/dataTables.bootstrap5.min.js"></script>
 
-<script type="text/javascript" src="../scripts/frmPrueba.js"></script>
+<script type="text/javascript" src="../scripts/frmStockAvailable.js"></script>
 
 </html>
