@@ -9,7 +9,7 @@ function LoadStock(type) {
 		$('#table').DataTable({
 			ajax: {
 				// "url": "https://localhost:7213/Inventory", 
-				"url": "http://tegrawarivera.somee.com/Inventory",
+				"url": "https://tegrawarivera.somee.com/Inventory",
 				"method": "GET",
 				"dataSrc": ""
 			},
@@ -37,7 +37,7 @@ function LoadStock(type) {
 			prodToSearch = $('#txtSearch').val();
 
 		// var url = "https://localhost:7213/Inventory/SearchProducts/" + prodToSearch + "/" + $('#chkNoStock').is(':checked');
-		var url = "http://tegrawarivera.somee.com/Inventory/SearchProducts/" + prodToSearch + "/" + $('#chkNoStock').is(':checked');
+		var url = "https://tegrawarivera.somee.com/Inventory/SearchProducts/" + prodToSearch + "/" + $('#chkNoStock').is(':checked');
 
 		$('#table').DataTable({
 			ajax: {
@@ -65,7 +65,7 @@ function LoadStock(type) {
 
 function LoadDetail(product) {
 	// var url = "https://localhost:7213/Inventory/GetBoxes/" + product;
-	var url = "http://tegrawarivera.somee.com/Inventory/GetBoxes/" + product;
+	var url = "https://tegrawarivera.somee.com/Inventory/GetBoxes/" + product;
 
 	$('#table2').DataTable({
 		ajax: {
