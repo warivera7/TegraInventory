@@ -13,9 +13,19 @@
     <!-- Datatable -->
     <link rel="stylesheet" type="text/css" href="../../../assets/datatables/dataTables.bootstrap5.min.css" />
 
+    <style>
+
+        table.dataTable thead { 
+            background-color: #0D6EFD;
+            color: white;
+            text-decoration: bold;
+        }
+
+    </style>
+
+    <title>Tegra Inventory</title>
 </head>
 <body>
-
     <div class="container">
         <br>
         <span id="message"></span>
@@ -61,6 +71,34 @@
                         </thead>
                         <tbody></tbody>
                     </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal bd-example-modal-lg" tabindex="-1" id="box_detail_modal">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="dynamic_modal_title">Product Details</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <br>
+                <div class="modal-body">
+                    <div class="row">
+                        <table class="table table-striped table-bordered" id="table2">
+                            <thead>
+                                <tr>
+                                    <th>Box #</th>
+                                    <th>Last Operation Date</th>
+                                    <th>Available Quantity</th>
+                                </tr>
+                            </thead>
+                        </table>
+                    </div>
+                </div>
+                <div class="modal-footer">            
+                    <button type="button" class="btn btn-primary" id="closeBoxDetail" data-dismiss="modal">Close</button>
                 </div>
             </div>
         </div>
