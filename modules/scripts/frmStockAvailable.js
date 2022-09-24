@@ -104,4 +104,4 @@ $('#chkNoStock').change(function () {
 
 $('#closeBoxDetail').click(function () {
 	$('#box_detail_modal').modal('hide');
-});
+}); 
