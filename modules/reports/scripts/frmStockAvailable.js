@@ -1,11 +1,13 @@
 var type = 0;
 
 $(document).ready(function () {
+	// Load all products by default
 	LoadStock(type);
 });
 
 function LoadStock(type)
 {
+	// Load all products by default
 	if (type == 0)
 	{
 		$('#table').DataTable({
@@ -30,7 +32,7 @@ function LoadStock(type)
 			]
 		});
 	}
-	else if (type == 1)
+	else if (type == 1)		// Filter products by code or stock availability
 	{
 		var prodToSearch = "";
 
@@ -66,6 +68,7 @@ function LoadStock(type)
 }
 
 
+// Consult Boxes by the selected product 
 function LoadDetail(product) {
 	// var url = "https://localhost:7213/Inventory/GetBoxes/" + product;
 	var url = "../actions/loadAPI.php?request=3&product=" + product;
@@ -89,6 +92,7 @@ function LoadDetail(product) {
 	$('#box_detail_modal').modal('show');
 }
 
+// Search specific product according to text typed
 $('#txtSearch').keyup(function (evt, t) {
 	if ($('#txtSearch').val().length > 0) {
 		LoadStock(1);
@@ -98,6 +102,7 @@ $('#txtSearch').keyup(function (evt, t) {
 	}
 });
 
+// Filter products depending of availability checkbox status
 $('#chkNoStock').change(function () {
 	if ($('#txtSearch').val().length > 0 || $('#chkNoStock').is(':checked'))
 		LoadStock(1);

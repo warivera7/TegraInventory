@@ -3,6 +3,7 @@
     
     $source = "";
 
+    // API consumption
     if ( $_GET["request"] == 1 )
     {
         $source = "https://tegrawarivera.somee.com/Inventory?_=" . strval(rand());
